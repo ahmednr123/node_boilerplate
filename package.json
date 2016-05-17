@@ -1,0 +1,23 @@
+{
+  "name": "project_01",
+  "version": "1.0.0",
+  "description": "Some random project! Yet to be filled",
+  "main": "app.js",
+  "author": [
+    "Ahmed Noor",
+    "Arvind Mahto"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.13.4",
+    "jade": "^1.11.0",
+    "pug": "~2.0.0-alpha7",
+    "redis": "^2.6.0-2"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-watch": "~4.3.5",
+    "gulp-stylus": "~2.3.1",
+    "gulp-jade": "~1.1.0"
+  }
+}
