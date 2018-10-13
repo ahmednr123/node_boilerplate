@@ -1,23 +1,18 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
 
-var redis = require('redis')
-var db = redis.createClient()
+const routes = require('./routes/routes.js')
 
-app.set('view engine', 'jade')
+const port = process.env.PORT || 8080
 
-db.on('connect', function(){
-	console.log('Database Connected')
-})
+app.set('view engine', 'pug')
 
-db.on('error', function(err){
-	console.log('Error' + err)
-})
+app.use(express.static('public'))
 
-app.use('/', function(req, res){
-	res.render('Hello bruh!')
-})
+routes(app)
 
-app.listen('8080', function(){
+app.listen(port, function(){
+
 	console.log('Online!')
+	
 })
